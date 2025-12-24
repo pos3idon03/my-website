@@ -1,0 +1,68 @@
+@import 'variables';
+
+/* Netflix Color Scheme */
+:root {
+  --netflix-black: #{$netflix-black};
+  --netflix-dark: #{$netflix-dark};
+  --netflix-red: #{$netflix-red};
+  --netflix-red-hover: #{$netflix-red-hover};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $netflix-black;
+  color: $text-primary;
+  line-height: 1.6;
+}
+
+#app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $netflix-black 0%, $netflix-dark 100%);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $netflix-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $netflix-red;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $netflix-red-hover;
+}
+
+/* Links */
+a {
+  color: $netflix-red;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $netflix-red-hover;
+  }
+}
+
+/* Selection */
+::selection {
+  background: $netflix-red;
+  color: $text-primary;
+}
+

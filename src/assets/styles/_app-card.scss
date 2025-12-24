@@ -1,0 +1,74 @@
+@import 'variables';
+
+.app-card {
+  background: rgba(20, 20, 20, 0.8);
+  padding: $spacing-large;
+  border-radius: $border-radius;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  transition: $transition;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    border-color: $netflix-red;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(229, 9, 20, 0.3);
+  }
+}
+
+.app-name {
+  color: $netflix-red;
+  font-size: 1.5rem;
+  margin: 0 0 $spacing-medium 0;
+  font-weight: bold;
+}
+
+.app-links {
+  display: flex;
+  gap: $spacing-medium;
+  margin-bottom: $spacing-large;
+}
+
+.app-link,
+.logical-view-link {
+  color: $netflix-red;
+  text-decoration: none;
+  padding: $spacing-small $spacing-medium;
+  border: 1px solid $netflix-red;
+  border-radius: $border-radius-small;
+  transition: $transition;
+  font-size: 0.9rem;
+
+  &:hover {
+    background: $netflix-red;
+    color: $text-primary;
+  }
+}
+
+.tech-stack {
+  margin-top: auto;
+}
+
+.tech-stack-title {
+  color: $text-secondary;
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.tech-stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-small;
+}
+
+.tech-stack-badge {
+  background: rgba(229, 9, 20, 0.15);
+  color: $netflix-red;
+  padding: 0.4rem 0.8rem;
+  border-radius: $border-radius-small;
+  font-size: 0.85rem;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+

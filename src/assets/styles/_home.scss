@@ -1,0 +1,51 @@
+@import 'variables';
+
+.home {
+  padding: $spacing-xlarge;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: $netflix-red;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 $spacing-xlarge 0;
+  grid-column: 1 / -1;
+}
+
+.top-section {
+  margin-bottom: $spacing-xxlarge;
+}
+
+.top-section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xlarge;
+}
+
+.middle-section {
+  margin-bottom: $spacing-xxlarge;
+}
+
+.bottom-section {
+  margin-bottom: $spacing-xxlarge;
+}
+
+.bottom-section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xlarge;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .top-section-content,
+  .bottom-section-content {
+    grid-template-columns: 1fr;
+  }
+}
+

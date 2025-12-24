@@ -1,0 +1,43 @@
+@import 'variables';
+
+.social-links-section {
+  background: rgba(20, 20, 20, 0.8);
+  padding: $spacing-xlarge;
+  border-radius: $border-radius;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-medium;
+  color: $text-primary;
+  text-decoration: none;
+  padding: $spacing-medium;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: $border-radius-small;
+  transition: $transition;
+
+  &:hover {
+    border-color: $netflix-red;
+    background: rgba(229, 9, 20, 0.1);
+    transform: translateX(8px);
+  }
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.social-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+

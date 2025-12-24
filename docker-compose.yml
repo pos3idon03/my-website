@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: my-website
+    restart: unless-stopped
+
+  web-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8081:80"
+    container_name: my-website-prod
+    restart: unless-stopped
+    cap_add:
+      - NET_BIND_SERVICE
+

@@ -1,0 +1,48 @@
+@import 'variables';
+
+.summary-section {
+  background: rgba(20, 20, 20, 0.8);
+  padding: $spacing-xlarge;
+  border-radius: $border-radius;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.name {
+  color: $netflix-red;
+  font-size: 2.5rem;
+  margin: 0 0 $spacing-small 0;
+  font-weight: bold;
+}
+
+.title {
+  color: $text-secondary;
+  font-size: 1.5rem;
+  margin: 0 0 $spacing-medium 0;
+  font-weight: normal;
+}
+
+.bio {
+  color: $text-primary;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 $spacing-xlarge 0;
+}
+
+.cv-button {
+  display: inline-block;
+  background: $netflix-red;
+  color: $text-primary;
+  padding: 0.75rem $spacing-xlarge;
+  border-radius: $border-radius-small;
+  text-decoration: none;
+  font-weight: bold;
+  transition: $transition;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $netflix-red-hover;
+    transform: scale(1.05);
+  }
+}
+

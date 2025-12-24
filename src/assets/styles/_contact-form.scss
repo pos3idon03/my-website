@@ -1,0 +1,80 @@
+@import 'variables';
+
+.contact-form-section {
+  background: rgba(20, 20, 20, 0.8);
+  padding: $spacing-xlarge;
+  border-radius: $border-radius;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-large;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-small;
+}
+
+.form-label {
+  color: $text-primary;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  border-radius: $border-radius-small;
+  padding: 0.75rem;
+  color: $text-primary;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: $transition;
+
+  &:focus {
+    outline: none;
+    border-color: $netflix-red;
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+  }
+
+  &::placeholder {
+    color: #666;
+  }
+}
+
+.submit-button {
+  background: $netflix-red;
+  color: $text-primary;
+  padding: 0.75rem $spacing-xlarge;
+  border: none;
+  border-radius: $border-radius-small;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: $transition;
+  align-self: flex-start;
+
+  &:hover {
+    background: $netflix-red-hover;
+    transform: scale(1.05);
+  }
+}
+
+.submit-message {
+  color: $netflix-red;
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: $border-radius-small;
+  background: rgba(229, 9, 20, 0.1);
+
+  &.success {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+  }
+}
+
