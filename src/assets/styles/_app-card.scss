@@ -72,3 +72,49 @@
   border: 1px solid rgba(229, 9, 20, 0.3);
 }
 
+.tech-details {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+}
+
+.tech-section {
+  &:not(:last-child) {
+    padding-bottom: $spacing-medium;
+    border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+  }
+}
+
+.tech-section-title {
+  color: $netflix-red;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.tech-section-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.tech-section-item {
+  color: $text-secondary;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+  position: relative;
+
+  &::before {
+    content: '•';
+    color: $netflix-red;
+    position: absolute;
+    left: -1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
