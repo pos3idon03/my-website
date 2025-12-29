@@ -1,10 +1,10 @@
 @import 'variables';
 
 .contact-form-section {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(27, 38, 59, 0.05);
   padding: $spacing-xlarge;
   border-radius: $border-radius;
-  border: 1px solid rgba(229, 9, 20, 0.3);
+  border: 1px solid rgba(65, 90, 119, 0.3);
 }
 
 .contact-form {
@@ -20,36 +20,37 @@
 }
 
 .form-label {
-  color: $text-primary;
+  color: $text-charcoal;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .form-input,
 .form-textarea {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(229, 9, 20, 0.3);
+  background: $background-soft-white;
+  border: 1px solid rgba(65, 90, 119, 0.3);
   border-radius: $border-radius-small;
   padding: 0.75rem;
-  color: $text-primary;
+  color: $text-charcoal;
   font-size: 1rem;
   font-family: inherit;
   transition: $transition;
 
   &:focus {
     outline: none;
-    border-color: $netflix-red;
-    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+    border-color: $accent-blue;
+    box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.2);
   }
 
   &::placeholder {
-    color: #666;
+    color: $text-slate;
+    opacity: 0.6;
   }
 }
 
 .submit-button {
-  background: $netflix-red;
-  color: $text-primary;
+  background: $accent-blue;
+  color: $background-soft-white;
   padding: 0.75rem $spacing-xlarge;
   border: none;
   border-radius: $border-radius-small;
@@ -60,17 +61,18 @@
   align-self: flex-start;
 
   &:hover {
-    background: $netflix-red-hover;
+    background: $accent-blue-hover;
+    color: $text-charcoal;
     transform: scale(1.05);
   }
 }
 
 .submit-message {
-  color: $netflix-red;
+  color: $accent-blue;
   margin: 0;
   padding: 0.75rem;
   border-radius: $border-radius-small;
-  background: rgba(229, 9, 20, 0.1);
+  background: rgba(0, 119, 182, 0.1);
 
   &.success {
     color: #4CAF50;

@@ -1,10 +1,10 @@
 @import 'variables';
 
 .technologies-section {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(27, 38, 59, 0.05);
   padding: $spacing-xlarge;
   border-radius: $border-radius;
-  border: 1px solid rgba(229, 9, 20, 0.3);
+  border: 1px solid rgba(65, 90, 119, 0.3);
 }
 
 .tech-categories {
@@ -20,10 +20,10 @@
 }
 
 .category-title {
-  color: $text-primary;
+  color: $text-charcoal;
   font-size: 1.2rem;
   margin: 0;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .tech-items {
@@ -33,17 +33,18 @@
 }
 
 .tech-badge {
-  background: rgba(229, 9, 20, 0.2);
-  color: $netflix-red;
+  background: rgba(0, 119, 182, 0.1);
+  color: $accent-blue;
   padding: $spacing-small $spacing-medium;
   border-radius: $border-radius-small;
-  border: 1px solid rgba(229, 9, 20, 0.5);
+  border: 1px solid rgba(0, 119, 182, 0.3);
   font-size: 0.9rem;
   transition: $transition;
+  font-weight: bold;
 
   &:hover {
-    background: rgba(229, 9, 20, 0.4);
-    border-color: $netflix-red;
+    background: rgba(0, 119, 182, 0.2);
+    border-color: $accent-blue;
     transform: translateY(-2px);
   }
 }

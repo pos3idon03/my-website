@@ -10,7 +10,7 @@ function Home() {
     <div className="home">
       {/* Top Section: 2x1 Grid */}
       <section className="top-section">
-        <h2 className="section-title">Who am I?</h2>
+        <h2 className="section-title">Hello 👋 I'm Artemis Kouniakis</h2>
         <div className="top-section-content">
           <SummarySection />
           <TechnologiesSection />
