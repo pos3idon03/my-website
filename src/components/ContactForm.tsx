@@ -10,6 +10,7 @@ function ContactForm() {
   })
   const [submitMessage, setSubmitMessage] = useState('')
   const [isSuccess, setIsSuccess] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     if (submitMessage) {
@@ -21,19 +22,44 @@ function ContactForm() {
     }
   }, [submitMessage])
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Placeholder for form submission logic
-    console.log('Form submitted:', form)
-    setSubmitMessage('Thank you for your message! I will get back to you soon.')
-    setIsSuccess(true)
+    setIsLoading(true)
+    setSubmitMessage('')
 
-    // Reset form
-    setForm({
-      name: '',
-      email: '',
-      message: ''
-    })
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form)
+      })
+
+      const data = await response.json()
+
+      if (response.ok && data.success) {
+        setSubmitMessage('Thank you for your message! I will get back to you soon.')
+        setIsSuccess(true)
+        // Reset form
+        setForm({
+          name: '',
+          email: '',
+          message: ''
+        })
+      } else {
+        setSubmitMessage(
+          data.error || 'Something went wrong. Please try again later.'
+        )
+        setIsSuccess(false)
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitMessage('Failed to send message. Please try again later.')
+      setIsSuccess(false)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (
@@ -92,8 +118,12 @@ function ContactForm() {
             placeholder="Your message..."
           />
         </div>
-        <button type="submit" className="submit-button">
-          Send Message
+        <button
+          type="submit"
+          className="submit-button"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Sending...' : 'Send Message'}
         </button>
         {submitMessage && (
           <p className={`submit-message ${isSuccess ? 'success' : ''}`}>
