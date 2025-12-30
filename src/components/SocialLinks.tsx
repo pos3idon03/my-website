@@ -18,7 +18,7 @@ function SocialLinks() {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/',
+      url: 'https://github.com/pos3idon03',
       icon: <FaGithub />
     },
     {
