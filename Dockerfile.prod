@@ -18,8 +18,8 @@ RUN npm run build
 # Production stage
 FROM nginx:1.25.3-alpine
 
-# Install Node.js runtime for backend server
-RUN apk add --no-cache nodejs npm
+# Install Node.js runtime and netcat for backend server
+RUN apk add --no-cache nodejs npm netcat-openbsd
 
 # Create non-root user (nginx user already exists in Alpine image with UID 101)
 # Set ownership of nginx directories
@@ -58,5 +58,5 @@ USER nginx
 EXPOSE 8080 3001
 
 # Start both nginx and backend server
-CMD ["/app/start.sh"]
+CMD ["sh", "/app/start.sh"]
 
