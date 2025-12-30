@@ -1,5 +1,6 @@
 import SummarySection from '@/components/SummarySection'
 import TechnologiesSection from '@/components/TechnologiesSection'
+import SkillsInPracticeGrid from '@/components/SkillsInPracticeGrid'
 import AppsGrid from '@/components/AppsGrid'
 import ContactForm from '@/components/ContactForm'
 import SocialLinks from '@/components/SocialLinks'
@@ -15,6 +16,12 @@ function Home() {
           <SummarySection />
           <TechnologiesSection />
         </div>
+      </section>
+
+      {/* Skills in Practice Section: 2x2 Grid */}
+      <section className="skills-in-practice-section">
+        <h2 className="section-title">My skills 🛠️ in practice</h2>
+        <SkillsInPracticeGrid />
       </section>
 
       {/* Middle Section: 2x2 Grid */}
