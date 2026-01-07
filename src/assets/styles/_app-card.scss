@@ -30,6 +30,12 @@
   margin-bottom: $spacing-large;
 }
 
+.app-description {
+  margin: 0;
+  flex-grow: 0;
+  color: $text-slate;
+}
+
 .app-link,
 .logical-view-link {
   background: $accent-blue;
@@ -41,6 +47,8 @@
   transition: $transition;
   font-size: 0.9rem;
   font-weight: bold;
+  text-align: center;
+  display: inline-block;
 
   &:hover {
     background: $accent-blue-hover;
@@ -50,7 +58,12 @@
 }
 
 .tech-stack {
-  margin-top: auto;
+  margin-top: $spacing-small;
+  margin-bottom: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .tech-stack-title {
@@ -77,10 +90,13 @@
 }
 
 .tech-details {
-  margin-top: auto;
+  margin-top: $spacing-small;
+  margin-bottom: 0;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: $spacing-medium;
+  justify-content: flex-start;
 }
 
 .tech-section {
