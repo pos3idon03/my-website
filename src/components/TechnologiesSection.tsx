@@ -9,20 +9,24 @@ interface TechCategory {
 function TechnologiesSection() {
   const categories: TechCategory[] = [
     {
-      name: 'Database',
-      technologies: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL']
+      name: 'Languages',
+      technologies: ['Python', 'C#', "R", 'TypeScript', 'Javascript', 'SQL', 'NoSQL']
     },
     {
-      name: 'Backend',
-      technologies: ['Node.js', 'Python', 'Java', 'Go', 'Rust']
+      name: 'LLM Tech',
+      technologies: ['LangChain', 'Qdrant', 'ChromaDB', 'Ollama', 'OpenAI API', 'Vertex AI', 'TensorFlow', 'Google AI Studio']
     },
     {
-      name: 'Frontend',
-      technologies: ['Vue.js', 'React', 'TypeScript', 'HTML5', 'CSS3']
+      name: 'Tech Infrastructure',
+      technologies: ['Docker', 'Kubernetes', 'Azure', 'AWS', 'Google Cloud']
     },
     {
-      name: 'AI',
-      technologies: ['TensorFlow', 'PyTorch', 'OpenAI API', 'LangChain']
+      name: 'Mathematics',
+      technologies: ['Quantitative Finance', 'Monte Carlo Simulations', 'Linear Algebra', 'Stochastic Calculus']
+    },
+    {
+      name: 'Other Skills',
+      technologies: ['Build AI Agents', 'Build RAG\'s', 'Build Software Solutions']
     }
   ]
 

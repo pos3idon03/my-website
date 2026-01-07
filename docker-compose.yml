@@ -24,7 +24,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "8082:80"
     container_name: my-website
     restart: unless-stopped
     depends_on:

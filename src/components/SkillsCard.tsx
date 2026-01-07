@@ -3,9 +3,10 @@ import '@/assets/styles/_skills-card.scss'
 interface SkillsCardProps {
   title: string
   content: string[]
+  realWorldExample?: string[]
 }
 
-function SkillsCard({ title, content }: SkillsCardProps) {
+function SkillsCard({ title, content, realWorldExample }: SkillsCardProps) {
   return (
     <div className="skills-card">
       <h3 className="skills-card-title">{title}</h3>
@@ -17,10 +18,18 @@ function SkillsCard({ title, content }: SkillsCardProps) {
         ))}
       </div>
       <div className="real-world-example">
-        <h4 className="real-world-example-title">Real World Example</h4>
-        <p className="real-world-example-placeholder">
-          {/* Placeholder for real world example */}
-        </p>
+        <h4 className="real-world-example-title">Hands-on Results</h4>
+        {realWorldExample ? (
+          realWorldExample.map((example, index) => (
+            <p key={index} className="real-world-example-text">
+              {example}
+            </p>
+          ))
+        ) : (
+          <p className="real-world-example-placeholder">
+            {/* Placeholder for real world example */}
+          </p>
+        )}
       </div>
     </div>
   )

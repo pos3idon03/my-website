@@ -6,10 +6,12 @@ interface TechDetails {
   aiMl?: string[]
   infrastructure?: string[]
   dataStorage?: string[]
+  externalServices?: string[]
 }
 
 interface App {
   name: string
+  description?: string
   appLink: string
   logicalViewLink: string
   techStack?: string[]
@@ -42,6 +44,9 @@ function AppCard({ app }: AppCardProps) {
           View Architecture
         </a>
       </div>
+      {app.description && (
+        <p className="app-description">{app.description}</p>
+      )}
       {app.techDetails ? (
         <div className="tech-details">
           {app.techDetails.backend && (
@@ -89,6 +94,16 @@ function AppCard({ app }: AppCardProps) {
               <h4 className="tech-section-title">Data Storage</h4>
               <ul className="tech-section-list">
                 {app.techDetails.dataStorage.map((item, index) => (
+                  <li key={index} className="tech-section-item">{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {app.techDetails.externalServices && (
+            <div className="tech-section">
+              <h4 className="tech-section-title">External Services</h4>
+              <ul className="tech-section-list">
+                {app.techDetails.externalServices.map((item, index) => (
                   <li key={index} className="tech-section-item">{item}</li>
                 ))}
               </ul>
